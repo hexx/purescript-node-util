@@ -1,0 +1,23 @@
+{
+  "name": "purescript-node-util",
+  "version": "0.0.1",
+  "authors": [
+    "Seitaro Yuuki <sensitivejapaneseman@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "examples",
+    "node_modules",
+    "output",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-functions": "~0.1.0"
+  },
+  "devDependencies": {
+    "purescript-console": "~0.1.1"
+  }
+}
