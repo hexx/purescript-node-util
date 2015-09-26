@@ -1,10 +1,15 @@
 module Node.Util where
 
+import Control.Monad.Eff
 import Data.Function
+import Prelude
 
-foreign import util ::
-  { inspect :: forall a opts. Fn2 a { | opts } String
-  }
+foreign import data UTIL :: !
 
-inspect :: forall a. a -> Boolean -> Int -> String
-inspect a showHidden depth = runFn2 util.inspect a { showHidden: showHidden, depth: depth }
+foreign import debuglog :: forall a eff. String -> String -> Array a -> Eff (util :: UTIL | eff) Unit
+
+foreign import format :: forall a eff. String -> Array a -> String
+
+foreign import inspect :: forall a opts eff. a -> { | opts } -> Eff (util :: UTIL | eff) String
+
+foreign import log :: forall eff. String -> Eff (util :: UTIL | eff) Unit

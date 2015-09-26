@@ -7,17 +7,15 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
-    "bower_components",
-    "examples",
     "node_modules",
-    "output",
-    "bower.json",
-    "package.json"
+    "bower_components",
+    "output"
   ],
   "dependencies": {
     "purescript-functions": "~0.1.0"
   },
   "devDependencies": {
-    "purescript-console": "~0.1.1"
+    "purescript-console": "~0.1.1",
+    "purescript-assert": "~0.1.1"
   }
 }
